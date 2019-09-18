@@ -1,0 +1,16 @@
+:host {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.min-title {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgba(77,208,225,0.4);
+  margin: 0px;
+}
+
+.chart-area {
+  flex: 1;
+}

@@ -1,0 +1,8 @@
+:host {
+  flex: 1;
+  display: flex;
+}
+
+.utilbar-container {
+  flex: 1;
+}

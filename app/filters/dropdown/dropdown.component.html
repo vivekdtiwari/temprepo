@@ -1,0 +1,14 @@
+<h4 class="dropdown-title mat-h4">{{title}}</h4>
+<mat-form-field appearance="outline" class="drop-form">
+  <mat-select placeholder="All" [multiple]="multiselect" (selectionChange)="change($event)" [(ngModel)]="filterset" #filterselect>
+    <!-- <mat-select-trigger *ngIf="multiselect=='true'">
+      {{filterset.value ? filterset.value[0] : ''}}
+      <span *ngIf="filterset.value?.length > 1" class="example-additional-selection">
+        (+{{filterset.value.length - 1}} {{filterset.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger> -->
+    <mat-option (onSelectionChange)="selectAll($event)" #allselect selected>All</mat-option>
+    <mat-option *ngFor="let value of options" [value]="value">{{value}}</mat-option>
+  </mat-select>
+</mat-form-field>
+{{selected2}}

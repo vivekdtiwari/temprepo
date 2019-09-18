@@ -1,0 +1,10 @@
+.dropdown-title {
+  margin: 0px;
+  justify-content: center;
+  display: flex;
+}
+
+.drop-form {
+  min-width: 50px;
+  max-width: 100%;
+}

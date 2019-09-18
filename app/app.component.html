@@ -1,0 +1,70 @@
+<div class="dashboard-base">
+  <h1 class="mat-display-1 dashboard-title">
+    <img src="/assets/janssen_logo_white.png" alt="janssen logo" class="dashboard-logo">
+    Payer Metrics of Remicade Indicated Population
+  </h1>
+  <app-filters class="filter-container"></app-filters>
+  <app-titlesplit class="pcontainer"></app-titlesplit>
+  <h1 class="mat-h1 dashboard-title">Membership characteristics across prior and current period</h1>
+  <div class="split-container">
+    <app-areasplit class="split-chart" title="Period / Age Group">
+      <app-minchart title="PRIOR"></app-minchart>
+      <app-minchart class="right-chart" title="CURRENT"></app-minchart>
+    </app-areasplit>
+    <app-areasplit class="split-chart right-chart" title="Period / Gender">
+      <app-minchart title="PRIOR" type="gender"></app-minchart>
+      <app-minchart class="right-chart" title="CURRENT" type="gender"></app-minchart>
+    </app-areasplit>
+  </div>
+  <div class="legend-area" *ngIf="this.dataservice.datasource=='OPTUM-SES'">
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#bab0ac"></div>EPO</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#f5d466"></div>HMO</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#b6992d"></div>IND</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#e15759"></div>Others</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#499894"></div>POS</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#786f6d"></div>PPO</h1>
+      </div>
+  <div class="legend-area" *ngIf="this.dataservice.datasource!='OPTUM-SES'">
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#bab0ac"></div>Cap POS</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#f5d466"></div>CDHP/HDHP</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#b6992d"></div>HMO</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#786f6d"></div>Non-Cap POS</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#499894"></div>Others</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#e15759"></div>PPO</h1>
+    <h1 class="mat-h4 legend-label"><div class="legend-box" style="background-color:#a0cbe9"></div>Unknown</h1>
+  </div>
+  <h1 class="mat-h1 dashboard-title">All-cause healthcare utilization and cost PMPM</h1>
+  <div class="split-container">
+    <app-areasplit class="split-chart" title="PRIOR">
+      <app-treemap period="PRIOR"></app-treemap>
+    </app-areasplit>
+    <app-areasplit class="split-chart right-chart" title="CURRENT">
+      <app-treemap period="CURRENT"></app-treemap>
+    </app-areasplit>
+  </div>
+  <div class="split-container">
+    <app-areasplit class="split-chart">
+      <app-utilbar period='PRIOR'></app-utilbar>
+    </app-areasplit>
+    <app-areasplit class="split-chart right-chart">
+      <app-utilbar period='CURRENT'></app-utilbar>
+    </app-areasplit>
+  </div>
+  <div class="split-container">
+    <app-areasplit class="split-chart">
+      <app-finalstack period='PRIOR'></app-finalstack>
+    </app-areasplit>
+    <app-areasplit class="split-chart right-chart">
+      <app-finalstack period='CURRENT'></app-finalstack>
+    </app-areasplit>
+  </div>
+  <div class="meta-container">
+    <div class="meta-label">
+      Terminologies:
+    </div>
+    <div class="meta-content">
+      <p class="meta-term">PMPM: Per Member Per Month</p>
+      <p class="meta-term">PTMPM: Per Thousand Members per Month</p>
+    </div>
+  </div>
+</div>

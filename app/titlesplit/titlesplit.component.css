@@ -1,0 +1,19 @@
+.current, .prior {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.date-value {
+  margin: 0px;
+  color: white;
+  font-family: Roboto;
+}
+
+.custom-title {
+  margin: 0px;
+  color: #4DD0E1;
+}

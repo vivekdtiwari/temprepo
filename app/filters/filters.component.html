@@ -1,0 +1,11 @@
+<div class="filter-base">
+<app-dropdown title="Database" class="filterbox" multiselect="false" [options]="datasources" (onUpdate)="updateDbFilter($event)"></app-dropdown>
+<app-dropdown title="Reporting Period" class="filterbox" [options]="reporting_period" (onUpdate)="updateRpFilter($event)"></app-dropdown>
+<app-dropdown title="Population" class="filterbox" [options]="population" (onUpdate)="updatePopulationfilter($event)"></app-dropdown>
+<app-dropdown title="Continuous Enrollment" class="filterbox" [options]="continuous_enrollment" (onUpdate)="updateCeFilter($event)"></app-dropdown>
+<app-dropdown title="Line of Business" class="filterbox" [options]="line_of_business" (onUpdate)="updateLobFilter($event)"></app-dropdown>
+<app-dropdown title="Plan Type" class="filterbox" [options]="plan_type" (onUpdate)="updatePlanFilter($event)"></app-dropdown>
+<app-dropdown title="Age Group" class="filterbox" [options]="age_group" (onUpdate)="updateAgeFilter($event)"></app-dropdown>
+<app-dropdown title="Gender" class="filterbox" [options]="gender" (onUpdate)="updateGenderFilter($event)"></app-dropdown>
+<app-dropdown title="State" class="filterbox" [options]="state" (onUpdate)="updateStateFilter($event)"></app-dropdown>
+</div>
